@@ -59,3 +59,11 @@ typings/
 
 # next.js build output
 .next
+
+.idea
+.cache
+.DS_Store
+_site
+.jekyll-metadata
+.sass-cache
+Gemfile.lock
