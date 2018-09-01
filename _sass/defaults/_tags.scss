@@ -5,5 +5,7 @@ html {
 }
 
 body {
+    background: $color-bg;
+    color: $color-txt;
     min-height: 100vh;
 }

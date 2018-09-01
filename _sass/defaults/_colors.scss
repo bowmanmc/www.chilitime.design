@@ -28,7 +28,7 @@ $color-bright: lighten($color-txt-light, 13%);
 $color-dark: #2A303D;
 $color-dark-dark: darken(#2A303D, 9%);
 
-$color-primary: #A4332F;
-$color-primary-20: darken($color-primary, 7%);
-$color-primary-80: #DFA35F;
+$color-primary: #BC0700;
+$color-primary-dk: mix($color-black, $color-primary, 10%);
+$color-primary-lt: mix($color-white, $color-primary, 10%);
 
