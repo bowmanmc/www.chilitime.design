@@ -1,6 +1,21 @@
 .header {
-    background: $color-primary url('../images/red-corners.svg') no-repeat top left fixed;
+    background: $color-primary url('../images/red-corners.svg') no-repeat top left;
     background-size: cover;
     border-bottom: 1px solid $color-white;
-    min-height: 66vh;
+
+    svg {
+        margin: 1.0em;
+
+        @include desktop {
+            margin: 4.0em;
+        }
+
+        .Logo {
+            fill: $color-white;
+        }
+        .Text {
+            fill: $color-white;
+        }
+    }
+
 }
