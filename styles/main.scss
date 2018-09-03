@@ -10,7 +10,10 @@
 @import 'defaults/typography';
 
 // Components
+@import 'components/footer';
+@import 'components/form';
 @import 'components/header';
+@import 'components/main';
 
 // Layouts
 @import 'layouts/home';

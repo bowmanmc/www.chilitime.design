@@ -1,0 +1,62 @@
+
+<div class="contact">
+
+    <h2>Contact Us</h2>
+    <p>
+        We'd love to hear all about your project and how we can assist
+        you. Please include your company name and timeline in any requests.
+    </p>
+
+    <form id="contact-form">
+        <fieldset>
+            <label>Name</label>
+            <input type="text" id="form-name" name="name" placeholder="Your Name"/>
+        </fieldset>
+
+        <fieldset>
+            <label>Email Address</label>
+            <input type="email" id="form-email" name="email" placeholder="email@somewhere.com"/>
+        </fieldset>
+
+        <fieldset>
+            <label>Title</label>
+            <input type="text"id="form-title" name="title" placeholder="Message Title"/>
+        </fieldset>
+
+        <fieldset>
+            <label>Message</label>
+            <textarea name="message" id="form-message" placeholder="Message to Chilitime Design"></textarea>
+        </fieldset>
+
+        <button type="submit" id="submit-form">Submit</button>
+    </form>
+
+    <div id="form-result">
+
+    </div>
+</div>
+
+<script>
+    var $form = $('form#contact-form');
+    var url = 'https://script.google.com/macros/s/AKfycbzjMsRcwAqvIjVcT4OX4Lbxj1GUDlEaKpeMKuvA7Kokdm_1W7y4/exec'
+
+    $('#submit-form').on('click', function(e) {
+        e.preventDefault();
+
+        if ($('#form-title').val() && $('#form-email').val()) {
+            $.ajax({
+                url: url,
+                method: "GET",
+                dataType: "json",
+                data: $form.serialize(),
+                success: function(data) {
+                    $('#form-result').html("Thanks for contacting us! We'll be in touch shortly!");
+                }
+            });
+        }
+        else {
+            $('#form-result').html('Please fill out form before submitting.');
+        }
+    });
+</script>
+

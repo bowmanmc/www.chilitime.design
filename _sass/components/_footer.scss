@@ -1,0 +1,11 @@
+.footer {
+    background: $color-primary-dk;
+    border-top: 1px solid $color-white;
+    color: $color-gray-95;
+    padding: 2.0em 1.0em;
+
+
+    .contact {
+        max-width: 512px;
+    }
+}
