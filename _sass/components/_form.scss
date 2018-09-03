@@ -13,15 +13,17 @@ form {
     }
 
     input, textarea {
-        background: $color-primary-dk;
+        background: darken($color-primary-dk, 2%);
         border: 2px solid $color-primary;
         border-radius: 5px;
         box-sizing: border-box;
         color: $color-white;
         padding: 0.5em 1.0em;
+        transition: all 0.35s ease-in-out;
         width: 100%;
 
         &:focus {
+            background: darken($color-primary-dk, 5%);
             border: 2px solid $color-primary-lt;
             outline: none;
         }
@@ -54,9 +56,14 @@ form {
         cursor: pointer;
         font-weight: bold;
         padding: 1.0em 2.0em;
+        transition: all 0.35s ease-in-out;
 
         &:focus {
             outline: none;
+        }
+
+        &:hover {
+            background: lighten($color-primary, 5%);
         }
     }
 }
