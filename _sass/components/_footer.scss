@@ -2,10 +2,39 @@
     background: $color-primary-dk;
     border-top: 1px solid $color-white;
     color: $color-gray-95;
-    padding: 2.0em 1.0em;
+    display: flex;
+    flex-direction: column;
+    padding: 4.0em 2.0em;
 
+    @include desktop {
+        flex-direction: row;
+    }
 
-    .contact {
+    &__contact {
         max-width: 512px;
+    }
+
+    &__logo {
+        flex: 1;
+        margin-top: 4.0em;
+        text-align: left;
+
+        @include desktop {
+            margin-top: 0;
+            text-align: right;
+        }
+
+
+        svg {
+            height: 128px;
+            max-width: 100%;
+
+            .Logo {
+                fill: $color-white;
+            }
+            .Text {
+                fill: $color-white;
+            }
+        }
     }
 }

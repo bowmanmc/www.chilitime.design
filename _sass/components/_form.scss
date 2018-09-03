@@ -4,7 +4,7 @@ form {
         border: none;
         display: flex;
         flex-direction: column;
-        margin-bottom: 0.5em;
+        margin-bottom: 1.0em;
         padding: 0;
     }
 
@@ -13,14 +13,49 @@ form {
     }
 
     input, textarea {
+        background: $color-primary-dk;
         border: 2px solid $color-primary;
         border-radius: 5px;
         box-sizing: border-box;
+        color: $color-white;
         padding: 0.5em 1.0em;
         width: 100%;
 
         &:focus {
             border: 2px solid $color-primary-lt;
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $color-gray-70;
+        }
+    }
+
+    textarea {
+        height: 128px;
+    }
+
+    .buttons {
+        align-items: flex-start;
+        display: flex;
+        padding-top: 1.0em;
+
+        .messages {
+            flex: 1;
+            padding: 1.0em;
+        }
+    }
+
+    button {
+        background: $color-primary;
+        border: 2px solid $color-primary-lt;
+        border-radius: 5px;
+        color: $color-white;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 1.0em 2.0em;
+
+        &:focus {
             outline: none;
         }
     }

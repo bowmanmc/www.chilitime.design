@@ -4,36 +4,36 @@
     <h2>Contact Us</h2>
     <p>
         We'd love to hear all about your project and how we can assist
-        you. Please include your company name and timeline in any requests.
+        you! Send us a message and we'll be in touch shortly to setup a time
+        to discuss things futher.
     </p>
 
     <form id="contact-form">
         <fieldset>
             <label>Name</label>
-            <input type="text" id="form-name" name="name" placeholder="Your Name"/>
+            <input type="text" id="form-name" name="name" placeholder="Enter your name"/>
         </fieldset>
 
         <fieldset>
             <label>Email Address</label>
-            <input type="email" id="form-email" name="email" placeholder="email@somewhere.com"/>
+            <input type="email" id="form-email" name="email" placeholder="Enter your email address"/>
         </fieldset>
 
         <fieldset>
-            <label>Title</label>
-            <input type="text"id="form-title" name="title" placeholder="Message Title"/>
+            <label>Subject</label>
+            <input type="text"id="form-title" name="title" placeholder="What would you like to talk about?"/>
         </fieldset>
 
         <fieldset>
             <label>Message</label>
-            <textarea name="message" id="form-message" placeholder="Message to Chilitime Design"></textarea>
+            <textarea name="message" id="form-message" placeholder="Please provide an overview of your project, including any timelines, budget, and the best way to contact you."></textarea>
         </fieldset>
 
-        <button type="submit" id="submit-form">Submit</button>
+        <div class="buttons">
+            <div class="messages" id="form-result"></div>
+            <button type="submit" id="submit-form">Send Message</button>
+        </div>
     </form>
-
-    <div id="form-result">
-
-    </div>
 </div>
 
 <script>
@@ -42,6 +42,7 @@
 
     $('#submit-form').on('click', function(e) {
         e.preventDefault();
+        $('#form-result').html('');
 
         if ($('#form-title').val() && $('#form-email').val()) {
             $.ajax({
@@ -50,12 +51,12 @@
                 dataType: "json",
                 data: $form.serialize(),
                 success: function(data) {
-                    $('#form-result').html("Thanks for contacting us! We'll be in touch shortly!");
+                    $('#form-result').html("Thanks for contacting us! We'll be in touch shortly.");
                 }
             });
         }
         else {
-            $('#form-result').html('Please fill out form before submitting.');
+            $('#form-result').html('Please fill out the form fields above before submitting.');
         }
     });
 </script>
