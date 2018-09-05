@@ -1,0 +1,42 @@
+
+.post-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post-link {
+    border: 1px solid $color-gray-80;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    margin: 0;
+    width: 100%;
+
+    @include tablet {
+        width: 50%;
+    }
+
+    @include desktop {
+        width: 33.3%;
+    }
+
+    &:hover {
+    }
+
+    .post-preview {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex: 1;
+    }
+
+    .post-info {
+        border-top: 1px solid $color-gray-80;
+        padding: 1.0em;
+    }
+}
