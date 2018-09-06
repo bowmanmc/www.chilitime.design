@@ -1,0 +1,41 @@
+
+.navbar {
+    align-items: stretch;
+    border-bottom: 1px solid $color-primary;
+    display: flex;
+}
+
+.navbar__links {
+    display: flex;
+}
+
+.navbar__link {
+    align-items: center;
+    color: $color-primary;
+    display: flex;
+    justify-content: center;
+    padding: 1.0em;
+    text-decoration: none;
+    transition: all 0.35s ease-in-out;
+
+    &:hover {
+        background: $color-primary;
+        color: $color-white;
+    }
+}
+
+.navbar__logo {
+    flex: 1;
+    padding: 1.0em;
+
+    svg {
+        height: 64px;
+
+        .Logo {
+            fill: $color-primary;
+        }
+        .Text {
+            fill: $color-primary;
+        }
+    }
+}
