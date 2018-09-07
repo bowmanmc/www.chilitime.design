@@ -6,20 +6,30 @@ date:   2018-08-03
 
 # Building Radial Dials with React
 
+## What we're building
+
+## SVG
+
+## ViewBox
+
+## Magic radius calculation
+
+## stroke dash array
+
+## Animating it
+
+## Example references
+
+## References and further reading
+
 https://codepen.io/webslingerm/pen/RYVBGw
 
 ```jsx
 const Radial = (props) => {
-
     const BAR_WIDTH = 5;
 
     const amt = props.completed || 0;
     const dashString = `${amt}, 100`;
-
-    let text = null;
-    if (props.showPercentage) {
-        text = (<text x='50%' y='50%'>{amt}%</text>);
-    }
 
     return (
         <svg className='Radial' viewBox='0 0 36 36'>
@@ -34,7 +44,6 @@ const Radial = (props) => {
                     className="completed" 
                     strokeDasharray={dashString} />
             </g>
-            { text }
         </svg>
     );
 };
