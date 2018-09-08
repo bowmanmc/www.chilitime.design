@@ -1,6 +1,11 @@
 .main {
     margin: 0 auto;
     padding: 1.0em;
-    max-width: 1024px;
+    max-width: 768px;
     min-height: 512px;
+
+    img {
+        margin: 0.5em 0;
+        max-width: 100%;
+    }
 }
