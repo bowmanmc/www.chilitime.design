@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Chilitime Design - a human-centered data visualization design company",
   "scripts": {
-      "start": "jekyll serve --incremental --livereload --verbose",
-      "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "jekyll serve --incremental --livereload --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Michael Bowman <bowmanmc@gmail.com>"
+  "author": "Michael Bowman <bowmanmc@gmail.com>",
+  "dependencies": {
+  }
 }

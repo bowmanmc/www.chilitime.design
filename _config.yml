@@ -8,7 +8,9 @@ twitter_username: webslingerm
 github_username:  bowmanmc
 
 sass:
-    sass_dir: _sass
+    load_paths:
+      - _sass
+      - node_modules
     style: compressed
 
 # Build settings

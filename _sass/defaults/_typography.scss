@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
 
 
@@ -6,23 +5,38 @@ $fontstack-body: 'Open Sans', sans-serif;
 $fontweight-normal: 400;
 $fontweight-bold: 800;
 
+$fontsize-xs: 12px;
 $fontsize-small: 14px;
 $fontsize-normal: 18px;
 $fontsize-large: 24px;
 $fontsize-xl: 96px;
 
+$lineheight: 1.4em;
+
+
 body, p, li {
     font-family: $fontstack-body;
     font-size: $fontsize-normal;
-    line-height: 1.35em;
+    line-height: $lineheight;
+    word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $fontstack-body;
     font-weight: $fontweight-bold;
+    line-height: $lineheight;
 }
 
 .highlight {
-    font-size: $fontsize-small;
-    line-height: 1.5em;
+    font-size: $fontsize-xs;
+    line-height: $lineheight;
+
+    @include desktop {
+        font-size: $fontsize-normal;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
 }
