@@ -8,7 +8,7 @@ date:   2018-09-04
 2018-09
 
 
-## What we're working towards
+## What we're building
 ![Animated React Radial Dial](/images/201809-ReactRadials/radial-complete.gif "Animated React Radial Dial")
 
 We're going to be building a reusable react component for animated radial dials.
@@ -51,6 +51,15 @@ for the radius of a circle with a circumference equal to 100 is:
 ``` r = 15.915 ```
 
 
+## Setting the Viewbox
+With a radius of 15.915, we'll come out with a diameter of about 32.
+This means the svg itself renders 32 viewbox units wide and tall.
+We have our stroke-width set to 5 viewbox units, so to prevent the circle
+from being clipped by the viewbox, we'll need to add 2.5 units on all sides.
+That gives us a viewBox attribute:
+``` viewbox="0 0 37 37" ``` 
+
+
 ## Stroke Dash Array
 * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray
 * https://css-tricks.com/almanac/properties/s/stroke-dasharray/
@@ -67,6 +76,7 @@ circumference of the entire circle is 100, we can set this equal to the
 percentage and it will draw a line for the right amount! The second number is
 how long to make the gap in-between the dashes. We can just set this to 100 so 
 that no matter what percentage we're displaying, we'll just get one line.
+
 
 ## Animating it
 
