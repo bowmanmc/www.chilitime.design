@@ -1,32 +1,45 @@
 ---
 layout: post
-title:  "Radial Dials with React"
+title:  "Activity Rings with SVG"
 date:   2018-09-04
 ---
 
-# Building Radial Dials with React
+# Activity Rings with SVG
 2018-09
 
 
-## What we're building
-![Animated React Radial Dial](/images/201809-ReactRadials/radial-complete.gif "Animated React Radial Dial")
+## What we'll be building
+![Animated Activity Rings](/images/201809-ActivityRings/rings-complete.gif "Animated React Radial Dial")
 
-We're going to be building a reusable react component for animated radial dials.
-* Straight lines are easier to interpret (bar chart)
-* These are used for aesthetic reasons
-* Apple watch
+Activity rings are a visualization made famous by the Apple Watch, 
+which encourages you to 
+"[close your rings](https://www.apple.com/watch/close-your-rings/)" 
+every day by completing activities.
+
+These rings are great for showing a percentage and looking good while doing it,
+but are a bad idea if you want your users to compare the rings to each other.
+The outer rings will be longer than the inner rings even when they are 
+representing the same amount. When used judiciously though, these 
+rings are great for showing data in an engaging, interesting, and 
+aesthetically pleasing way.
+
+If you'd like to jump straight into the finished code, check it out on
+[codepen](https://codepen.io/webslingerm/pen/GXxxVx)
 
 
 ## SVG
-* https://css-tricks.com/using-svg/
-* https://abookapart.com/products/practical-svg
-* Sara Soueidan - https://www.sarasoueidan.com/tags/svg/
-* Joni Trythall - http://svgpocketguide.com/
-* Mozilla 
+We'll build our activity rings using 
+[Scalable Vector Graphics](https://developer.mozilla.org/en-US/docs/Web/SVG).
+There are lots of resources below on SVG technology, so here I'll just say
+that it is great and you should use it wherever you can. By using SVG, you
+send markup that tells the browser how to draw an image, rather than sending
+the pixel data itself. This results in crisper images on higher density 
+displays (such as an iPhone or 4k monitor) and smaller file sizes. In addition,
+since SVG is markup, we can program it like we would any other HTML component.
 
 
 ## ViewBox
-* https://www.sarasoueidan.com/blog/svg-coordinate-systems/
+
 
 
 ## Magic radius calculation
@@ -96,32 +109,9 @@ that no matter what percentage we're displaying, we'll just get one line.
 
 ## References and further reading
 
-https://codepen.io/webslingerm/pen/RYVBGw
-
-```jsx
-const Radial = (props) => {
-  const BAR_WIDTH = 5;
-
-  const amt = props.completed || 0;
-  const dashString = `${amt}, 100`;
-
-  return (
-    <svg className='Radial' 
-      viewBox='0 0 36 36'>
-      
-      <g className='dials'>
-        <circle strokeWidth={BAR_WIDTH} 
-          r="15.915" 
-          cx="50%" cy="50%" 
-          className="background" />
-        
-        <circle strokeWidth={BAR_WIDTH} 
-          r="15.915" 
-          cx="50%" cy="50%" 
-          className="completed" 
-          strokeDasharray={dashString} />
-      </g>
-    </svg>
-  );
-};
-```
+### SVG
+* https://css-tricks.com/using-svg/
+* https://abookapart.com/products/practical-svg
+* Sara Soueidan - https://www.sarasoueidan.com/tags/svg/
+* Joni Trythall - http://svgpocketguide.com/
+* ViewBox - https://www.sarasoueidan.com/blog/svg-coordinate-systems/
