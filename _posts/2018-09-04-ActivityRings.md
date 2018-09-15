@@ -38,21 +38,15 @@ displays (such as an iPhone or 4k monitor) and smaller file sizes. In addition,
 since SVG is markup, we can program it like we would any other HTML component.
 
 
-## ViewBox
-
-
-
 ## Magic radius calculation
-The circumference of a circle ``` C ``` equals two, multiplied by pi, multipled 
+The circumference of a circle ``` C ``` equals two, multiplied by pi, multiplied
 the radius of the circle. 
 
 ``` C = 2πr ```
 
-Since we're using our radial to display percentages, we want to set things up 
+Since we're using our rings to display percentages, we want to set things up 
 so that if we send it 50, it draws half a circle. Sending it 25 would draw
-a quarter of a circle, and 100 would draw a comnplete circle.
-There are several ways to make this happen, but the most straight-forward way 
-is to set the circumference of the circle equal to 100. 
+a quarter of a circle, and 100 would draw a complete circle.
 
 Working backwards, that gives us:
 
@@ -64,13 +58,20 @@ for the radius of a circle with a circumference equal to 100 is:
 ``` r = 15.915 ```
 
 
-## Setting the Viewbox
+## Setting the ViewBox
+[ViewBox](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox) is 
+an SVG attribute that allows us to setup drawing coordinates for our image.
+This is handy since our SVG may be rendered across thousands of pixels on a 
+desktop monitor or a few hundred pixels on a mobile phone. By having a 
+ViewBox, we can setup drawing instructions using coordinates separated from the
+pixels they are eventually rendered as.
+
 With a radius of 15.915, we'll come out with a diameter of about 32.
 This means the svg itself renders 32 viewbox units wide and tall.
-We have our stroke-width set to 5 viewbox units, so to prevent the circle
-from being clipped by the viewbox, we'll need to add 2.5 units on all sides.
-That gives us a viewBox attribute:
-``` viewbox="0 0 37 37" ``` 
+We're going to set our stroke-width (the thickness of the ring) to 3 viewbox units, 
+so to prevent the circle from being clipped by the viewbox, we'll need to add 1.5 
+units on all sides. That gives us a viewBox attribute:
+``` viewBox="0 0 35 35" ``` 
 
 
 ## Stroke Dash Array
