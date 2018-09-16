@@ -9,3 +9,13 @@ body {
     color: $color-txt;
     min-height: 100vh;
 }
+
+a {
+    color: $color-primary;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-primary-lt;
+    }
+}
