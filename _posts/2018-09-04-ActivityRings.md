@@ -76,7 +76,7 @@ Ok, let's put it all together and draw a circle.
 
 ### Markup
 {% highlight html %}
-<svg class="ActivityRings" viewBox='0 0 35 35'>
+<svg class="ActivityRings" viewBox="0 0 35 35">
     <g class="ring ring1">
         <circle class="background"
             cx="50%" cy="50%"
@@ -121,7 +121,7 @@ markup are rendered behind the items later in the source.
 
 ### Markup
 {% highlight html %}
-<svg class="ActivityRings" viewBox='0 0 35 35'>
+<svg class="ActivityRings" viewBox="0 0 35 35">
     <g class="ring ring1" style="transform: scale(1) rotate(-90deg);">
         <circle class="background"
             cx="50%" cy="50%"
@@ -142,10 +142,14 @@ markup are rendered behind the items later in the source.
     height: 100%;
     width: 100%;
 
+    .ring {
+        transform-origin: 50%;
+    }
     circle {
         fill: none;
     }
 }
+
 $color-red: #c53f3d;
 .ring1 {
     .background {
