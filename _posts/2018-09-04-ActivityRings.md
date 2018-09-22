@@ -100,8 +100,10 @@ which encourages you to
 "[close your rings](https://www.apple.com/watch/close-your-rings/)" 
 every day by completing various activities.
 
-These rings are great for showing a percentage and looking good while doing it,
-but are a bad idea if you want your users to compare the rings to each other.
+Before we get started though, I should mention that these rings only work in certain
+situations when displaying certain data sets. 
+While they are great for showing a percentage and looking good while doing it,
+they are a bad idea if you want your users to compare the rings to each other.
 The outer rings will be longer than the inner rings even when they are 
 representing the same amount. When used judiciously though, these 
 rings are great for showing data in an engaging, interesting, and 
@@ -261,10 +263,10 @@ at ``` stroke-dasharray="0 100" ``` and playing forwards to
 
 ## Adding Rings
 Adding rings is a simple matter of copying and scaling the ring. To keep the
-stroke widths the same through the scaling, divide our starting stroke-width
-of 3 by the scaling factor. So for ring 2 
+stroke widths the same through the scaling, divide the starting stroke-width
+of 3 by the scaling factor. So for ring 2:  
 ``` stroke-width = 3 / 0.75 = 4```
-and for ring 3
+and for ring 3: 
 ``` stroke-width = 3 / 0.50 = 6```
 
 ### Markup
