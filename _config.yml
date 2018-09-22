@@ -14,7 +14,7 @@ sass:
     style: compressed
 
 # Build settings
-permalink: /:year/:month/:title
+permalink: /:year/:month/:title/
 future: true
 markdown: kramdown
 plugins:
