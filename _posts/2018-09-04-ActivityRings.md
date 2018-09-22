@@ -20,78 +20,8 @@ date:   2018-09-04
 </div>
 
 ## What We're Building
-<style>
-@-webkit-keyframes RingProgress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-@keyframes RingProgress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-.ActivityRingsExample {
-  background-color: #222;
-  height: 300px;
-  margin-top: 0.5em;
-  padding: 1.0em;
-  width: 100%;
-}
-.ActivityRings {
-  height: 100%;
-  width: 100%;
-}
-.ActivityRings .ring {
-  -webkit-transform-origin: 50%;
-          transform-origin: 50%;
-}
-.ActivityRings .completed {
-  -webkit-animation: RingProgress 1s ease-in-out forwards;
-          animation: RingProgress 1s ease-in-out forwards;
-  stroke-linecap: round;
-}
-.ActivityRings circle {
-  fill: none;
-}
-
-.ring1 .background {
-  stroke: rgba(197, 63, 61, 0.2);
-}
-.ring1 .completed {
-  stroke: #c53f3d;
-}
-
-.ring2 .background {
-  stroke: rgba(148, 213, 90, 0.2);
-}
-.ring2 .completed {
-  stroke: #94d55a;
-}
-
-.ring3 .background {
-  stroke: rgba(112, 190, 215, 0.2);
-}
-.ring3 .completed {
-  stroke: #70bed7;
-}
-</style>
-
-<div class="ActivityRingsExample">
-    <svg class="ActivityRings" viewBox='0 0 37 37'>
-        <g class="ring ring1" style="transform: scale(1) rotate(-90deg);">
-            <circle stroke-width="3" r="15.915" cx="50%" cy="50%" class="background" />
-            <circle stroke-width="3" r="15.915" cx="50%" cy="50%" class="completed" stroke-dasharray="85, 100" />
-        </g>
-        <g class="ring ring2" style="transform: scale(0.75) rotate(-90deg);">
-            <circle stroke-width="4" r="15.915" cx="50%" cy="50%" class="background" />
-            <circle stroke-width="4" r="15.915" cx="50%" cy="50%" class="completed" stroke-dasharray="85, 100" />
-        </g>
-        <g class="ring ring3" style="transform: scale(0.5) rotate(-90deg);">
-            <circle stroke-width="6" r="15.915" cx="50%" cy="50%" class="background" />
-            <circle stroke-width="6" r="15.915" cx="50%" cy="50%" class="completed" stroke-dasharray="85, 100" />
-        </g>
-    </svg>
+<div class="example">
+    <img src="/images/201809-ActivityRings/rings-complete.gif" alt="Activity Rings Complete" />
 </div>
 
 
@@ -176,8 +106,9 @@ style them like we would HTML components, though SVG elements have a few new
 attributes to work with such as fill and stroke.
 
 Ok, you should now see something like
-![Activity Rings Start](/images/201809-ActivityRings/rings-start.png "Activity Rings Start")
-
+<div class="example">
+    <img src="/images/201809-ActivityRings/rings-start.png" alt="Activity Rings Start" />
+</div>
 
 That's not bad, but not very interesting either. Let's add a ring representing
 85% completion for this activity. First, we'll add another circle after our
@@ -256,8 +187,9 @@ We can animate the drawing of the ring by setting the starting the animation
 at ``` stroke-dasharray="0 100" ``` and playing forwards to 
 ``` stroke-dasharray="85 100" ``` Now your ring should look like:
 
-![Activity Rings Single](/images/201809-ActivityRings/rings-single.gif "Activity Rings Single")
-
+<div class="example">
+    <img src="/images/201809-ActivityRings/rings-single.gif" alt="Activity Rings Single" />
+</div>
 
 
 
@@ -344,7 +276,10 @@ $color-blue: #70bed7;
 {% endhighlight %}
 
 
-![Activity Rings Complete](/images/201809-ActivityRings/rings-complete.gif "Activity Rings Complete")
+<div class="example">
+    <img src="/images/201809-ActivityRings/rings-complete.gif" alt="Activity Rings Complete" />
+</div>
+
 
 For the complete code, check it out on 
 [codepen](https://codepen.io/webslingerm/pen/GXxxVx)
