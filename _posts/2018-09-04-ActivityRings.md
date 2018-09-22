@@ -1,24 +1,104 @@
 ---
 layout: post
-title:  "Activity Rings with SVG"
+title:  Building Activity Rings with SVG
 preview: 201809-ActivityRings/rings-complete.gif
 date:   2018-09-04
 ---
 
 <div class="post-header">
-    <h1>Activity Rings with SVG</h1>
+    <h1>Building Activity Rings with SVG</h1>
     <div class="post-meta">
-        2018-09
+        September, 2018 - Michael Bowman
+    </div>
+    <div class="post-summary">
+        Activity Rings are a handy way to show 
+        data representing percentage complete. 
+        In this tutorial, we'll recreate
+        this visualization made popular by the
+        Apple Watch using web-friendly SVG.
     </div>
 </div>
 
 ## What We're Building
-![Animated Activity Rings](/images/201809-ActivityRings/rings-complete.gif "Animated Activity Rings")
+<style>
+@-webkit-keyframes RingProgress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+@keyframes RingProgress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.ActivityRingsExample {
+  background-color: #222;
+  height: 300px;
+  margin-top: 0.5em;
+  padding: 1.0em;
+  width: 100%;
+}
+.ActivityRings {
+  height: 100%;
+  width: 100%;
+}
+.ActivityRings .ring {
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+}
+.ActivityRings .completed {
+  -webkit-animation: RingProgress 1s ease-in-out forwards;
+          animation: RingProgress 1s ease-in-out forwards;
+  stroke-linecap: round;
+}
+.ActivityRings circle {
+  fill: none;
+}
+
+.ring1 .background {
+  stroke: rgba(197, 63, 61, 0.2);
+}
+.ring1 .completed {
+  stroke: #c53f3d;
+}
+
+.ring2 .background {
+  stroke: rgba(148, 213, 90, 0.2);
+}
+.ring2 .completed {
+  stroke: #94d55a;
+}
+
+.ring3 .background {
+  stroke: rgba(112, 190, 215, 0.2);
+}
+.ring3 .completed {
+  stroke: #70bed7;
+}
+</style>
+
+<div class="ActivityRingsExample">
+    <svg class="ActivityRings" viewBox='0 0 37 37'>
+        <g class="ring ring1" style="transform: scale(1) rotate(-90deg);">
+            <circle stroke-width="3" r="15.915" cx="50%" cy="50%" class="background" />
+            <circle stroke-width="3" r="15.915" cx="50%" cy="50%" class="completed" stroke-dasharray="85, 100" />
+        </g>
+        <g class="ring ring2" style="transform: scale(0.75) rotate(-90deg);">
+            <circle stroke-width="4" r="15.915" cx="50%" cy="50%" class="background" />
+            <circle stroke-width="4" r="15.915" cx="50%" cy="50%" class="completed" stroke-dasharray="85, 100" />
+        </g>
+        <g class="ring ring3" style="transform: scale(0.5) rotate(-90deg);">
+            <circle stroke-width="6" r="15.915" cx="50%" cy="50%" class="background" />
+            <circle stroke-width="6" r="15.915" cx="50%" cy="50%" class="completed" stroke-dasharray="85, 100" />
+        </g>
+    </svg>
+</div>
+
 
 Activity rings are a visualization made famous by the Apple Watch, 
 which encourages you to 
 "[close your rings](https://www.apple.com/watch/close-your-rings/)" 
-every day by completing activities.
+every day by completing various activities.
 
 These rings are great for showing a percentage and looking good while doing it,
 but are a bad idea if you want your users to compare the rings to each other.
@@ -28,9 +108,9 @@ rings are great for showing data in an engaging, interesting, and
 aesthetically pleasing way.
 
 If you'd like to jump straight into the finished code, check it out on
-[codepen](https://codepen.io/webslingerm/pen/GXxxVx)
+[codepen here](https://codepen.io/webslingerm/pen/GXxxVx).
 
-Also, I've put tons of reference material in the 
+Also, I've put a ton of reference material in the 
 [References and Further Reading](#references-and-further-reading)
 section below. If you're unfamiliar with SVG, CSS, or any of the technologies
 used in this tutorial, check them out to get up to speed.
@@ -273,7 +353,6 @@ For the complete code, check it out on
 * [https://developer.mozilla.org/en-US/docs/Web/SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
 * [https://css-tricks.com/using-svg/](https://css-tricks.com/using-svg/)
 * [https://abookapart.com/products/practical-svg](https://abookapart.com/products/practical-svg)
-* [https://www.sarasoueidan.com/tags/svg](https://www.sarasoueidan.com/tags/svg)
 * [https://www.sarasoueidan.com/blog/svg-coordinate-systems](https://www.sarasoueidan.com/blog/svg-coordinate-systems)
 * [https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox)
 * [https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray)
