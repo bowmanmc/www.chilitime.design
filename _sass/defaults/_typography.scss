@@ -11,6 +11,7 @@ $rift: rift, sans-serif;
 $fontstack-mono: $csstricks-mono;
 $fontstack-body: $serif;
 $fontstack-headings: $rift;
+$fontstack-system: $system;
 
 $fontweight-normal: 400;
 $fontweight-bold: 900;
@@ -25,7 +26,7 @@ $fontsize-xxl: 96px;
 $lineheight: 1.4em;
 
 
-body, p, li {
+body {
     font-family: $fontstack-body;
     font-size: $fontsize-normal;
     line-height: $lineheight;
