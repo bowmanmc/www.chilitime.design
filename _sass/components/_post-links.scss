@@ -14,7 +14,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 380px;
+    height: 480px;
     margin: 1.0em;
     width: 100%;
 
@@ -39,6 +39,9 @@
     .post-info {
         background: $color-white;
         border-top: 1px solid $color-gray-80;
+        font-family: $fontstack-headings;
+        font-size: $fontsize-xl;
+        line-height: $fontsize-xl;
         padding: 1.0em;
     }
 }

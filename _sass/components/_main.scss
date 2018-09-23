@@ -17,12 +17,11 @@
     padding-bottom: 0.5em;
 
     h1 {
-        margin-bottom: 0;
+        margin-bottom: 0.25em;
     }
 
     .post-meta, .post-summary {
         color: $color-gray-40;
-        font-size: $fontsize-small;
         font-style: italic;
     }
 

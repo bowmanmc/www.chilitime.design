@@ -4,19 +4,23 @@ $serif: Georgia, Cambria, 'Times New Roman', Times, serif;
 $sanserif: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
 $csstricks-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
 $futura: Futura, 'Trebuchet MS', Arial, sans-serif;
+$rift: rift, sans-serif;
+
+@import url("https://use.typekit.net/pph8vvy.css");
 
 $fontstack-mono: $csstricks-mono;
-$fontstack-body: $system;
-$fontstack-headings: $futura;
+$fontstack-body: $serif;
+$fontstack-headings: $rift;
 
 $fontweight-normal: 400;
-$fontweight-bold: 800;
+$fontweight-bold: 900;
 
 $fontsize-xs: 12px;
 $fontsize-small: 14px;
 $fontsize-normal: 18px;
 $fontsize-large: 24px;
-$fontsize-xl: 96px;
+$fontsize-xl: 48px;
+$fontsize-xxl: 96px;
 
 $lineheight: 1.4em;
 
@@ -29,14 +33,25 @@ body, p, li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $fontstack-body;
+    color: $color-primary-dk;
+    font-family: $fontstack-headings;
     font-weight: $fontweight-bold;
-    line-height: $lineheight;
-    margin: 1.5em 0 0 0;
+    margin: 1.5em 0 0.5em 0;
 }
 
 h1 {
+    //color: $color-primary;
+    font-size: $fontsize-xxl;
+    line-height: $fontsize-xxl;
     margin-top: 0;
+}
+
+h2 {
+    font-size: $fontsize-xl;
+}
+
+h3 {
+    font-size: $fontsize-large;
 }
 
 .highlight {
@@ -50,7 +65,7 @@ h1 {
     }
 
     pre {
-        background: $color-gray-90;
+        background: $color-gray-95;
         padding: 0.5em;
         white-space: pre-wrap;
         word-wrap: break-word;
@@ -58,7 +73,7 @@ h1 {
 }
 
 code {
-    background: $color-gray-90;
+    background: $color-gray-95;
     font-size: $fontsize-small;
     font-family: $fontstack-mono;
 }
