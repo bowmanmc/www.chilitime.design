@@ -50,7 +50,7 @@ used in this tutorial, check them out to get up to speed.
 
 ## Magic Radius Calculation
 The key to making these easy to use is making the circumference of the circle
-equal to 100. If we do that, then we'll be able to show percentages easily 
+equal to 100. If we do that, then we'll be able to show percentages  
 without having to do any scaling when we render.
 
 The circumference of a circle ``` C ``` equals two, multiplied by pi, multiplied
