@@ -5,7 +5,6 @@ preview: 201809-ActivityRings/rings-complete.gif
 card: /images/201809-ActivityRings/activity-rings-card-1200.png
 date: 2018-09-04
 excerpt: >-
-    Chilitime Design says: 
     Activity Rings are a handy way to show data representing percentage 
     complete. In this tutorial, we'll recreate this visualization made popular by the
     Apple Watch using web-friendly SVG.
