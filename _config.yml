@@ -4,7 +4,7 @@ email: bowmanmc@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Chilitime Design - a human-centered data visualization design company in Dayton, Ohio.
 baseurl: "https://www.chilitime.design"
-url: "https://www.chilitime.design"
+url: ""
 twitter_username: webslingerm
 github_username:  bowmanmc
 card: /images/chilitime-card-1200.png
