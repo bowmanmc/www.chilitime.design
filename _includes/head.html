@@ -17,8 +17,8 @@
     <meta name="twitter:card" content="{% if page.card %}{{ page.card }}{% else %}{{ site.card }}{% endif %}">
     <meta name="twitter:image:src" content="{% if page.card %}{{ page.card }}{% else %}{{ site.card }}{% endif %}">
     <meta name="twitter:image:alt" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines}}{% else %}{{ site.description }}{% endif %}">
-    <meta name="twitter:site" content="{% site.twitter_username %}">
-    <meta name="twitter:creator" content="{% site.twitter_username %}">
+    <meta name="twitter:site" content="{{ site.twitter_username }}">
+    <meta name="twitter:creator" content="{{ site.twitter_username }}">
     <meta property="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines}}{% else %}{{ site.description }}{% endif %}">
 
 
