@@ -12,13 +12,13 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines}}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{% if page.card %}{{ page.card }}{% else %}{{ site.card }}{% endif %}">
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:image" content="{% if page.card %}{{ page.card | prepend: site.url }}{% else %}{{ site.card | prepend: site.url }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <meta property="og:site_name" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:image:src" content="{% if page.card %}{{ page.card | prepend: site.baseurl }}{% else %}{{ site.card | prepend: site.baseurl }}{% endif %}">
+    <meta name="twitter:image:src" content="{% if page.card %}{{ page.card | prepend: site.url }}{% else %}{{ site.card | prepend: site.url }}{% endif %}">
     <meta name="twitter:image:alt" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines}}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:site" content="{{ site.twitter_username }}">
     <meta name="twitter:creator" content="{{ site.twitter_username }}">
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#ffffff">
 
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
 
     <link rel="stylesheet" href="/styles/main.css" />
     {% include javascript.html %}
